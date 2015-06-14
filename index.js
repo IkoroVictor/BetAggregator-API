@@ -12,7 +12,7 @@ var db = null;
 var MONGO_DB_URL= 'mongodb://ikorovictor:prometheus1@ds031962.mongolab.com:31962/naijaodds';
 
 app.get('/', function (req, res) {
-    res.json({name: 'victor'})
+    res.send('Hello World');
 })
 
 app.get('/days', function (req, res) {
