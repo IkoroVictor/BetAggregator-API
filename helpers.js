@@ -9,6 +9,7 @@ exports.getGameSearchQuery = function (name) {
             {'home': {$regex: (name)}},
             {'away': {$regex: (  name )}},
             {'title': {$regex: ( name  )}},
+            {'id': {$regex: ( name  )}}
 
         ]};
 
