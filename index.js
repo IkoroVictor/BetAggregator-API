@@ -5,6 +5,7 @@
 var express = require('express');
 var MongoClient = require('mongodb').MongoClient;
 var controller = require('./controllers');
+var url = require('url');
 
 var app = express();
 var db = null;
@@ -30,7 +31,9 @@ app.get('/game/:id', function (req, res) {
 })
 
 app.get('/games/search', function (req, res) {
-    res.send('Hello World')
+    var query = url.parse(req.url);
+    controller.getSearchGames(db,query.q, req, res)
+
 })
 
 app.get('/game/:id/codes', function (req, res) {
