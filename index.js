@@ -27,7 +27,11 @@ app.get('/games/:date', function (req, res) {
 })
 
 app.get('/game/:id', function (req, res) {
-    res.send('Hello World')
+    controller.getGameByID(db, req, res)
+})
+
+app.get('/game/:id/:timestamp', function (req, res) {
+    controller.getGame(db, req, res)
 })
 
 app.get('/search', function (req, res) {
@@ -37,13 +41,6 @@ app.get('/search', function (req, res) {
 
 })
 
-app.get('/game/:id/codes', function (req, res) {
-    res.send('Hello World')
-})
-
-app.get('/games/:day/codes', function (req, res) {
-    res.send('Hello World')
-})
 
 
 

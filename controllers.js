@@ -51,6 +51,30 @@ exports.getGames = function(db,date, req, res)
         }
     })
 }
+exports.getGame = function(db, req, res)
+{
+    db.createCollection("games", function (err, games) {
+        if (!err) {
+            var cursor = games.find({'id': req.params.id, timestamp : req.params.timestamp });
+            cursor.toArray(function (err, documents) //TODO Don't use 'toArray().length' find a better method to get item count
+            {
+                  res.json(documents)
+            });
+        }
+    })
+}
+exports.getGameByID = function(db, req, res)
+{
+    db.createCollection("games", function (err, games) {
+        if (!err) {
+            var cursor = games.find({'id': req.params.id});
+            cursor.toArray(function (err, documents) //TODO Don't use 'toArray().length' find a better method to get item count
+            {
+                  res.json(documents)
+            });
+        }
+    })
+}
 
 exports.getSearchGames = function(db,name, req, res)
 {
