@@ -16,11 +16,13 @@ app.get('/', function (req, res) {
 })
 
 app.get('/days', function (req, res) {
+
     controller.getDays(db, req, res);
 })
 
-app.get('/games/:day', function (req, res) {
-    res.send('Hello World')
+app.get('/games/:date', function (req, res) {
+
+    controller.getGames(db,req.params.date, req, res)
 })
 
 app.get('/game/:id', function (req, res) {
