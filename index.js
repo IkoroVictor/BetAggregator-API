@@ -31,7 +31,8 @@ app.get('/game/:id', function (req, res) {
 })
 
 app.get('/game/:id/:timestamp', function (req, res) {
-    controller.getGame(db, req, res)
+    res.json(req.params)
+    //controller.getGame(db, req, res)
 })
 
 app.get('/search', function (req, res) {
