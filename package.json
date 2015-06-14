@@ -1,0 +1,32 @@
+{
+  "name": "betaggregator-api",
+  "version": "1.0.0",
+  "description": "REST-API for BetAggregator",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.12.4",
+    "mongodb": "^2.0.33",
+    "mongoose": "^4.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IkoroVictor/BetAggregator-API.git"
+  },
+  "keywords": [
+    "bet",
+    "odds",
+    "nigeria",
+    "surebet",
+    "nairabet"
+  ],
+  "author": "Victor Ikoro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IkoroVictor/BetAggregator-API/issues"
+  },
+  "homepage": "https://github.com/IkoroVictor/BetAggregator-API#readme"
+}
