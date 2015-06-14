@@ -47,7 +47,7 @@ MongoClient.connect(MONGO_DB_URL, function(err, temp_db) {
         console.log("Connected correctly to DB");
         GLOBAL.db_conn_status = 1;
         db = temp_db;
-        var port = process.env.port || 3000;
+        var port = process.env.PORT || 3000;
         app.listen(port)
 
     }
