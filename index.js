@@ -32,7 +32,8 @@ app.get('/game/:id', function (req, res) {
 
 app.get('/games/search', function (req, res) {
     var query = url.parse(req.url);
-    controller.getSearchGames(db,query.q, req, res)
+    res.json(query);
+    //controller.getSearchGames(db,query.q, req, res)
 
 })
 
