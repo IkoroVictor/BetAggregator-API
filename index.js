@@ -30,7 +30,7 @@ app.get('/game/:id', function (req, res) {
     res.send('Hello World')
 })
 
-app.get('/games/search', function (req, res) {
+app.get('/search', function (req, res) {
 
     res.send(req.param('q'));
     //controller.getSearchGames(db,query.q, req, res)
