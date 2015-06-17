@@ -33,7 +33,7 @@ exports.getGames = function(db,date, req, res)
 
                     home:1,
                     away: 1,
-
+					category_key: 1,
                     'odds.1': 1,
                     'odds.x': 1,
                     'odds.2': 1,
@@ -43,7 +43,7 @@ exports.getGames = function(db,date, req, res)
 
                 }
 
-            );
+            ).sort({ category_key: 1, timestamp: 1});
             cursor.toArray(function (err, documents) //TODO Don't use 'toArray().length' find a better method to get item count
             {
                   res.json(documents)
@@ -92,6 +92,7 @@ exports.getSearchGames = function(db,name, req, res)
 
                     home:1,
                     away: 1,
+                    category_key: 1,
 
                     'odds.1': 1,
                     'odds.x': 1,
@@ -102,7 +103,7 @@ exports.getSearchGames = function(db,name, req, res)
 
                 }
 
-            );
+            ).sort({ category_key: 1, timestamp: 1});;
             cursor.toArray(function (err, documents) //TODO Don't use 'toArray().length' find a better method to get item count
             {
                   res.json(documents)
