@@ -7,7 +7,7 @@ exports.getDays = function(db, req, res)
 {
     db.createCollection("days", function (err, bet_days) {
         if (!err) {
-            var cursor = bet_days.find({});
+            var cursor = bet_days.find({}).sort({ timestamp: 1});
             cursor.toArray(function (err, documents) //TODO Don't use 'toArray().length' find a better method to get item count
             {
                   res.json(documents);
