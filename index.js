@@ -10,7 +10,7 @@ var controller = require('./controllers');
 var app = express();
 var db = null;
 
-var MONGO_DB_URL= 'mongodb://ikorovictor:prometheus1@ds031962.mongolab.com:31962/naijaodds';
+var MONGO_DB_URL= 'ENTER MONGO_DB URL HERE ';
 
 app.get('/', function (req, res) {
     res.send('REST-API for NAIJAODDS');
